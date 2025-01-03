@@ -12,22 +12,6 @@ This project is a showcase of a RESTful API built using Node.js, following the *
 
 ---
 
-## **Features**
-- Follows **Clean Architecture** for better separation of concerns.
-- Fully **testable** with unit and integration tests.
-- Implements:
-  - **Dependency Injection** for loose coupling.
-  - **Interface Segregation** through precise service abstractions.
-  - **Open/Closed Principle** for extensible and non-breaking changes.
-  - **Single Responsibility** for each module and class.
-  - **Liskov Substitution Principle** to ensure system stability when replacing components.
-- Built with:
-  - **Node.js** (Backend runtime)
-  - **Express.js** (Web framework)
-  - **TypeScript** (Optional, for type safety)
-
----
-
 ## **SOLID Principles in Action**
 
 ### 1. **Single Responsibility Principle (SRP)**
@@ -57,7 +41,38 @@ High-level modules should not depend on low-level modules but on abstractions. I
 
 ---
 
-## **Contributing**
-Feel free to fork this project, submit pull requests, or open issues for suggestions.
+# APP Details:
+Gympass style APP
+
+## **FR (Functional Requirements)**
+
+- [ ] The system shall allow users to register 
+- [ ] The system shall allow users to authenticate
+- [ ] The system shall allow users to retrieve their logged-in profile
+- [ ] The system shall allow users to retrieve the number of check-ins made by the logged-in user
+- [ ] The system shall allow users to retrieve their check-in history.
+- [ ] The system shall allow users to search for nearby gyms.
+- [ ] The system shall allow users to search for gyms by name.
+- [ ] The system shall allow users to check in at a gym.
+- [ ] The system shall validate a user's check-in.
+- [ ] The system shall allow users to register a gym.
+
+
+## **BL (Business Logic)**
+
+- [ ] The system shall prevent users from registering with a duplicate username.
+- [ ] The system shall prevent users from making two check-ins on the same day.
+- [ ] The system shall allow users to check in only if they are within 100 meters of the gym.
+- [ ] The system shall allow check-ins to be validated only within 20 minutes after creation.
+- [ ] The system shall allow check-ins to be validated only by administrators.
+- [ ] The system shall allow gyms to be registered only by administrators.
+
+
+## **NFR (Non-Functional Requirements)**
+
+- [ ]  The system shall encrypt user passwords.
+- [ ]  The system shall persist application data in a PostgreSQL database.
+- [ ]  The system shall paginate all data lists with 20 items per page.
+- [ ]  The system shall identify users using a JSON Web Token (JWT).
 
 ---
