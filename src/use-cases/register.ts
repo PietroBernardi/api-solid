@@ -1,11 +1,16 @@
-import { hash } from 'bcryptjs' 
 import { UsersRepository } from '@/repositories/users-repository'
 import { UserAlreadyExistsError } from './errors/user-already-exists-error'
+import bcryptjs from 'bcryptjs'
+import { UserModel } from '@/repositories/models'
 
 interface RegisterUseCaseRequest {
   name: string
   email: string
   password: string
+}
+
+interface RegisterUseCaseResponse {
+  user: UserModel
 }
 
 // SOLID - Dependency Inversion Principle
@@ -24,19 +29,23 @@ export class RegisterUseCase {
     name, 
     email, 
     password
-  }: RegisterUseCaseRequest) {
+  }: RegisterUseCaseRequest): Promise<RegisterUseCaseResponse> {
     const userWithEmail = await this.userRepository.findByEmail(email)
   
     if (userWithEmail) {
       throw new UserAlreadyExistsError()
     }
   
-    const password_hash = await hash(password, 6)
+    const password_hash = await bcryptjs.hash(password, 6)
 
-    await this.userRepository.create({
+    const user = await this.userRepository.create({
       name,
       email,
       password_hash
     })
+
+    return {
+      user,
+    }
   }
 }
