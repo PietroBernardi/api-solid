@@ -46,21 +46,21 @@ Gympass style APP
 
 ## **FR (Functional Requirements)**
 
-- [ ] The system shall allow users to register 
-- [ ] The system shall allow users to authenticate
-- [ ] The system shall allow users to retrieve their logged-in profile
+- [x] The system shall allow users to register 
+- [x] The system shall allow users to authenticate
+- [x] The system shall allow users to retrieve their logged-in profile
 - [ ] The system shall allow users to retrieve the number of check-ins made by the logged-in user
 - [ ] The system shall allow users to retrieve their check-in history.
 - [ ] The system shall allow users to search for nearby gyms.
 - [ ] The system shall allow users to search for gyms by name.
-- [ ] The system shall allow users to check in at a gym.
+- [x] The system shall allow users to check in at a gym.
 - [ ] The system shall validate a user's check-in.
 - [ ] The system shall allow users to register a gym.
 
 
 ## **BL (Business Logic)**
 
-- [ ] The system shall prevent users from registering with a duplicate username.
+- [x] The system shall prevent users from registering with a duplicate email.
 - [ ] The system shall prevent users from making two check-ins on the same day.
 - [ ] The system shall allow users to check in only if they are within 100 meters of the gym.
 - [ ] The system shall allow check-ins to be validated only within 20 minutes after creation.
@@ -70,8 +70,8 @@ Gympass style APP
 
 ## **NFR (Non-Functional Requirements)**
 
-- [ ]  The system shall encrypt user passwords.
-- [ ]  The system shall persist application data in a PostgreSQL database.
+- [x]  The system shall encrypt user passwords.
+- [x]  The system shall persist application data in a PostgreSQL database.
 - [ ]  The system shall paginate all data lists with 20 items per page.
 - [ ]  The system shall identify users using a JSON Web Token (JWT).
 
