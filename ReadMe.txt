@@ -61,8 +61,8 @@ Gympass style APP
 ## **BL (Business Logic)**
 
 - [x] The system shall prevent users from registering with a duplicate email.
-- [ ] The system shall prevent users from making two check-ins on the same day.
-- [ ] The system shall allow users to check in only if they are within 100 meters of the gym.
+- [x] The system shall prevent users from making two check-ins on the same day.
+- [x] The system shall allow users to check in only if they are within 100 meters of the gym.
 - [ ] The system shall allow check-ins to be validated only within 20 minutes after creation.
 - [ ] The system shall allow check-ins to be validated only by administrators.
 - [ ] The system shall allow gyms to be registered only by administrators.

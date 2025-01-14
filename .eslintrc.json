@@ -1,11 +1,16 @@
 {
   "extends": [
-    "@rocketseat/eslint-config/node"
+    "@rocketseat/eslint-config/node",
+    "plugin:prettier/recommended"
   ],
   "prettier/prettier": [
     "error",
     {
       "endOfLine": "auto"
     }
-  ]
+  ],
+  "rules": {
+    "function-call-argument-newline": ["error", "always"],
+    "arrow-parens": ["error", "always"]
+  }
 }
